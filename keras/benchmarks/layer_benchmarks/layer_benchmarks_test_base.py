@@ -77,7 +77,7 @@ class LayerBenchmarksBase(tf.test.Benchmark):
         extras["us_per_example_with_xprof_and_python"] = us_per_example
 
         if metadata:
-            extras.update(metadata)
+            extras |= metadata
         self.report_benchmark(
             iters=num_iters,
             wall_time=us_mean_time,
