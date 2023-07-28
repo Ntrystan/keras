@@ -109,14 +109,14 @@ def load_data(
         )
         num_words = kwargs.pop("nb_words")
     if kwargs:
-        raise TypeError(f"Unrecognized keyword arguments: {str(kwargs)}")
+        raise TypeError(f"Unrecognized keyword arguments: {kwargs}")
 
     origin_folder = (
         "https://storage.googleapis.com/tensorflow/tf-keras-datasets/"
     )
     path = get_file(
         path,
-        origin=origin_folder + "reuters.npz",
+        origin=f"{origin_folder}reuters.npz",
         file_hash=(  # noqa: E501
             "d6586e694ee56d7a4e65172e12b3e987c03096cb01eab99753921ef915959916"
         ),
@@ -184,7 +184,7 @@ def get_word_index(path="reuters_word_index.json"):
     )
     path = get_file(
         path,
-        origin=origin_folder + "reuters_word_index.json",
+        origin=f"{origin_folder}reuters_word_index.json",
         file_hash="4d44cc38712099c9e383dc6e5f11a921",
     )
     with open(path) as f:
