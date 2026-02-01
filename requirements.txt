@@ -8,7 +8,7 @@ scipy ~= 1.9.2
 # with both new and old protobuf stubs. This is needed to resolve
 # Keras-TensorFlow circular dependency issue, when one of them gets a dependency
 # incompatible with another one (protobuf in this specific case).
-protobuf==3.20.3
+protobuf==6.33.5
 tf-nightly
 portpicker
 pyyaml
